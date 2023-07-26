@@ -1,3 +1,35 @@
+var container = document.querySelector('.numCandle');
+	var numCandle = container.innerText;
+
+	function formatnumCandle(numCandle, container) {
+	  var numCandleArray = numCandle.split(' ');
+	  var formattednumCandle = document.createElement('div');
+	  numCandleArray.map(function (word) {
+		formattednumCandle.appendChild(createWord(word));
+	  });
+	  console.log(numCandleArray);
+
+	  container.replaceChild(formattednumCandle, container.firstChild);
+	};
+
+	function createWord(characters) {
+	  var word = document.createElement('div');
+	  var wordArray = characters.split('');
+	  wordArray.map(function (char) {
+		word.appendChild(formatCharacter(char));
+	  });
+	  word.appendChild(formatCharacter('&nbsp;'));
+	  return word;
+	}
+
+	function formatCharacter(text) {
+	  var text = text === ' ' ? '&nbsp;' : text;
+	  var character = document.createElement('span');
+	  character.innerHTML = text;
+	  return character;
+	}
+
+	formatnumCandle(numCandle, container);
 // var mystatus = document.getElementById("status");
 var candle0 = document.querySelector("#candle0");
 var fame = document.querySelector("#fame0");

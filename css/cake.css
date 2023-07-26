@@ -124,14 +124,15 @@
     animation: myMove0 7s;
   }
 
+
+
   .candle-box1 {
     position: absolute;
     bottom: 120px;
     left: 50%;
-    margin-left: -50px;
+    margin-left: 50px;
     animation: myMove1 7s;
   }
-
   .candle-box2 {
     position: absolute;
     bottom: 120px;
@@ -157,24 +158,25 @@
     }
   }
 
+ 
+
   @keyframes myMove1 {
     0% {
-     bottom: 900px;
+      bottom: 900px;
       left: 50%;
     }
 
     80% {
-      bottom: 900px;
+     bottom: 900px;
       left: 50%;
     }
 
     100% {
       bottom: 120px;
       left: 50%;
-      margin-left: -50px;
+      margin-left: 50px;
     }
   }
-
   @keyframes myMove2 {
     0% {
       bottom: 900px;
@@ -194,42 +196,9 @@
   }
 
 
-  .candle-main {
-    position: relative;
-    width: 10px;
-    height: 35px;
-    background: linear-gradient(to right,#ABE0FF , #BFF1FF);
-    border-radius: 0 0 60px 60px / 0 0 25px 25px;
-    margin-top: 50px;
-  }
 
-  .candle-tip {
-    position: relative;
-    top: -17px;
-  }
 
-  .candle-top {
-    position: absolute;
-    top: 5px;
-    left: 0;
-    width: 10px;
-    height: 20px;
-    z-index: 10;
-    background: linear-gradient(to right, #ABE0FF , #BFF1FF);
-    box-shadow: 0 0 10px  #b6e2fc, inset;
-    border-radius: 60px / 25px;
-  }
 
-  .candle-top:after {
-    content: "";
-    position: absolute;
-    top: -8px;
-    left: calc(50% - 2px);
-    width: 3px;
-    height: 10px;
-    border-radius: 2px 2px 0 0;
-    background: linear-gradient(to bottom, #000 0%, #fff 100%);
-  }
 
   .candle-fame {
     width: 5px;
@@ -267,6 +236,9 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 55;
+    margin-left: -22px;
+    margin-top: -33px;
     background: radial-gradient(#d5d3d3ae, transparent);
   }
 
@@ -349,7 +321,27 @@
   .r-smoke10 {
     animation: smokeR linear 10s 10.5s infinite;
   }
+  @keyframes flicker {
+    0% {
+      transform: scale(1);
+    }
 
+    20% {
+      transform: scale(1.1, 0.9) rotate(3deg);
+    }
+
+    50% {
+      transform: scale(1, 1.2);
+    }
+
+    80% {
+      transform: scale(0.9, 1.1) rotate(-3deg);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
 
   @keyframes smokeL {
     0% {
@@ -382,3 +374,57 @@
       opacity: 0;
     }
   }
+ 
+ 
+
+
+  #fame0{
+    margin-top: -28px;
+    margin-left: -32px;
+  }
+  #fame1{
+    margin-top: -28px;
+    margin-left: -32px;
+  }
+  .candle-top {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 8px;
+    height: 20px;
+    z-index: 10;
+    border-radius: 60px / 25px;
+    margin-left: -20px;
+    margin-top: -26px;
+  }
+
+  .candle-top:after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: calc(50% - 2px);
+    width: 3px;
+    height: 8px;
+    border-radius: 2px 2px 0 0;
+    background: linear-gradient(to bottom, black , white );
+  }
+   .numCandle {
+	  font-family: 'Rubik';
+	  font-size: 3.5rem;
+	  font-weight: 900;
+	 margin-top: -8px;
+margin-left: -17px;
+position: absolute;
+	}
+
+	.numCandle span{
+	  color: #00B9ED;
+	  text-shadow: #00a5d4 1px 1px, #54d9ff -1px -1px, 
+    #08f2ff -2px -2px 6px, 
+    #17ccff -2px -2px, 
+    #17ccff -1px -2px, #17ccff -1px -3px,
+     #17ccff -2px -4px, #17ccff -2px -5px, 
+     #17ccff -3px -6px, #00B9ED -4px -7px, 
+     rgba(0, 0, 5, 0.4) 3px 4px 5px, rgba(0, 0, 5, 0.2) -3px -4px 5px;
+	
+	}
