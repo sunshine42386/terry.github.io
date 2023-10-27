@@ -5,15 +5,28 @@
 	<meta charset="UTF-8">
 	<title>生日快乐呀</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	<link rel="stylesheet" href="./css/fireworks.css">
+	<!-- <link rel="stylesheet" href="./css/fireworks.css"> -->
 	<link rel="stylesheet" href="./css/cake.css">
+<!-- <link rel="stylesheet" href="css/ph.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Rubik:700" rel="stylesheet">
 	<script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	
 </head>
-
+<style>
+	.container{
+		background-image: url('./sky.jpg');
+		background-size: cover;
+	}
+</style>
 <body>
 	<div class="container">
-		<div class="loading-init">
+		<div class="main">         
+            <div class="slide-content" id="slide_content">     
+             
+            </div>
+        </div>  
+		<!-- <div class="loading-init">
 			<div class="loading-init__header">Loading</div>
 			<div class="loading-init__status">Assembling Shells</div>
 		</div>
@@ -103,7 +116,7 @@
 				<div class="help-modal__body"></div>
 				<button type="button" class="help-modal__close-btn">Close</button>
 			</div>
-		</div>
+		</div> -->
 		<svg id="cake" version="1.1" x="0px" y="0px" width="200px" height="500px" viewBox="0 0 200 500"
 		enable-background="new 0 0 200 500" xml:space="preserve">
 		<path fill="#ABE0FF" d="M173.667-13.94c-49.298,0-102.782,0-147.334,0c-3.999,0-4-16.002,0-16.002
@@ -377,14 +390,15 @@
 		<script src="./js/cake.js"></script>
 	</div>
 
-
-
-	<!-- partial -->
 	<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/fscreen%401.0.1.js'></script>
 	<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/Stage%400.1.4.js'></script>
 	<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/MyMath.js'></script>
+	<script src="js/jQuery.easing.js"></script>
+    <script src="js/script.js"></script>
+	<!-- <script  src="js/ph.js"></script> -->
 
-<script src="./js/fireworks.js"></script>
+
+<!-- <script src="./js/fireworks.js"></script> -->
 </body>
 
 </html>
